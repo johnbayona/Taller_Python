@@ -1,0 +1,89 @@
+
+total_notas = 0
+cantidad_notas = 0
+
+
+def agregar_nota(nota):
+
+    global total_notas
+    global cantidad_notas
+
+    total_notas += nota
+    cantidad_notas += 1
+
+
+def calcular_promedio():
+
+    if cantidad_notas == 0:
+        return 0
+
+    return total_notas / cantidad_notas
+
+
+def contar_notas():
+
+    return cantidad_notas
+
+
+def reset_notas():
+
+    global total_notas
+    global cantidad_notas
+
+    total_notas = 0
+    cantidad_notas = 0
+
+
+def mostrar_estado():
+
+    print("Total acumulado:", total_notas)
+
+    print("Cantidad de notas:", cantidad_notas)
+
+    print("Promedio:", calcular_promedio())
+
+
+while True:
+
+    print("\n--- MENÚ ---")
+    print("1. Agregar nota")
+    print("2. Calcular promedio")
+    print("3. Contar notas")
+    print("4. Reiniciar sistema")
+    print("5. Mostrar estado")
+    print("6. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+
+        nota = float(input("Ingrese la nota: "))
+
+        agregar_nota(nota)
+
+    elif opcion == "2":
+
+        print("Promedio:", calcular_promedio())
+
+    elif opcion == "3":
+
+        print("Cantidad:", contar_notas())
+
+    elif opcion == "4":
+
+        reset_notas()
+
+        print("Sistema reiniciado")
+
+    elif opcion == "5":
+
+        mostrar_estado()
+
+    elif opcion == "6":
+
+        print("Programa finalizado")
+        break
+
+    else:
+
+        print("Opción inválida")

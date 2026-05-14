@@ -1,0 +1,106 @@
+
+def metros_a_centimetros(metros):
+
+    return metros * 100
+
+
+def metros_a_kilometros(metros):
+
+    return metros / 1000
+
+
+def kilos_a_gramos(kilos):
+
+    return kilos * 1000
+
+
+def kilos_a_libras(kilos):
+
+    return kilos * 2.20462
+
+
+def horas_a_minutos(horas):
+
+    return horas * 60
+
+
+def horas_a_segundos(horas):
+
+    return horas * 3600
+
+
+while True:
+
+    print("\n--- MENÚ PRINCIPAL ---")
+    print("1. Conversión de longitud")
+    print("2. Conversión de peso")
+    print("3. Conversión de tiempo")
+    print("4. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+
+        print("\n1. Metros a centímetros")
+        print("2. Metros a kilómetros")
+
+        subopcion = input("Seleccione una conversión: ")
+
+        metros = float(input("Ingrese los metros: "))
+
+        if subopcion == "1":
+
+            resultado = metros_a_centimetros(metros)
+
+        else:
+
+            resultado = metros_a_kilometros(metros)
+
+        print("Resultado:", resultado)
+
+    elif opcion == "2":
+
+        print("\n1. Kilos a gramos")
+        print("2. Kilos a libras")
+
+        subopcion = input("Seleccione una conversión: ")
+
+        kilos = float(input("Ingrese los kilos: "))
+
+        if subopcion == "1":
+
+            resultado = kilos_a_gramos(kilos)
+
+        else:
+
+            resultado = kilos_a_libras(kilos)
+
+        print("Resultado:", resultado)
+
+    elif opcion == "3":
+
+        print("\n1. Horas a minutos")
+        print("2. Horas a segundos")
+
+        subopcion = input("Seleccione una conversión: ")
+
+        horas = float(input("Ingrese las horas: "))
+
+        if subopcion == "1":
+
+            resultado = horas_a_minutos(horas)
+
+        else:
+
+            resultado = horas_a_segundos(horas)
+
+        print("Resultado:", resultado)
+
+    elif opcion == "4":
+
+        print("Programa finalizado")
+        break
+
+    else:
+
+        print("Opción inválida")
